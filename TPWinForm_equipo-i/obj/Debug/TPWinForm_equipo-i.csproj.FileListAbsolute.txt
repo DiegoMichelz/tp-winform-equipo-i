@@ -9,3 +9,14 @@ C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\TPWinF
 C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.exe
 C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.pdb
 C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.FrmAltaArticulo.resources
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe.config
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.pdb
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.csproj.AssemblyReference.cache
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.Form1.resources
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.FrmAltaArticulo.resources
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.Properties.Resources.resources
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.csproj.GenerateResource.cache
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.csproj.CoreCompileInputs.cache
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.exe
+D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.pdb

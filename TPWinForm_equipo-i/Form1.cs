@@ -17,10 +17,7 @@ namespace TPWinForm_equipo_i
             InitializeComponent();
         }
 
-        private void aGREGARToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Form1_Load(object sender, EventArgs e)
         {
