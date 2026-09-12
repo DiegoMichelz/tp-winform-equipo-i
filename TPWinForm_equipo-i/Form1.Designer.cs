@@ -86,25 +86,25 @@
             // aGREGARToolStripMenuItem1
             // 
             this.aGREGARToolStripMenuItem1.Name = "aGREGARToolStripMenuItem1";
-            this.aGREGARToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.aGREGARToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.aGREGARToolStripMenuItem1.Text = "AGREGAR";
             // 
             // mODIFICARToolStripMenuItem1
             // 
             this.mODIFICARToolStripMenuItem1.Name = "mODIFICARToolStripMenuItem1";
-            this.mODIFICARToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.mODIFICARToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.mODIFICARToolStripMenuItem1.Text = "MODIFICAR";
             // 
             // eLIMINARToolStripMenuItem1
             // 
             this.eLIMINARToolStripMenuItem1.Name = "eLIMINARToolStripMenuItem1";
-            this.eLIMINARToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.eLIMINARToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.eLIMINARToolStripMenuItem1.Text = "ELIMINAR";
             // 
             // vERDETALLEToolStripMenuItem1
             // 
             this.vERDETALLEToolStripMenuItem1.Name = "vERDETALLEToolStripMenuItem1";
-            this.vERDETALLEToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.vERDETALLEToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.vERDETALLEToolStripMenuItem1.Text = "VER DETALLE";
             // 
             // dataGridView1
