@@ -20,3 +20,4 @@ D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\
 D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.csproj.CoreCompileInputs.cache
 D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.exe
 D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.pdb
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.VerDetalle.resources

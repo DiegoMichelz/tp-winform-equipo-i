@@ -32,6 +32,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.aGREGARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aGREGARToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mODIFICARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eLIMINARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aGREGARToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mODIFICARToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.eLIMINARToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,10 +52,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aGREGARToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mODIFICARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eLIMINARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -82,6 +82,37 @@
             // 
             this.aGREGARToolStripMenuItem.Name = "aGREGARToolStripMenuItem";
             this.aGREGARToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
+            // 
+            // mENUToolStripMenuItem
+            // 
+            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aGREGARToolStripMenuItem2,
+            this.mODIFICARToolStripMenuItem,
+            this.eLIMINARToolStripMenuItem});
+            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
+            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.mENUToolStripMenuItem.Text = "MENU";
+            // 
+            // aGREGARToolStripMenuItem2
+            // 
+            this.aGREGARToolStripMenuItem2.Name = "aGREGARToolStripMenuItem2";
+            this.aGREGARToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.aGREGARToolStripMenuItem2.Text = "AGREGAR";
+            this.aGREGARToolStripMenuItem2.Click += new System.EventHandler(this.aGREGARToolStripMenuItem2_Click);
+            // 
+            // mODIFICARToolStripMenuItem
+            // 
+            this.mODIFICARToolStripMenuItem.Name = "mODIFICARToolStripMenuItem";
+            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mODIFICARToolStripMenuItem.Text = "MODIFICAR";
+            this.mODIFICARToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
+            // 
+            // eLIMINARToolStripMenuItem
+            // 
+            this.eLIMINARToolStripMenuItem.Name = "eLIMINARToolStripMenuItem";
+            this.eLIMINARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eLIMINARToolStripMenuItem.Text = "ELIMINAR";
+            this.eLIMINARToolStripMenuItem.Click += new System.EventHandler(this.eLIMINARToolStripMenuItem_Click);
             // 
             // aGREGARToolStripMenuItem1
             // 
@@ -211,34 +242,6 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 18;
             this.comboBox2.Text = "Categoría";
-            // 
-            // mENUToolStripMenuItem
-            // 
-            this.mENUToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aGREGARToolStripMenuItem2,
-            this.mODIFICARToolStripMenuItem,
-            this.eLIMINARToolStripMenuItem});
-            this.mENUToolStripMenuItem.Name = "mENUToolStripMenuItem";
-            this.mENUToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.mENUToolStripMenuItem.Text = "MENU";
-            // 
-            // aGREGARToolStripMenuItem2
-            // 
-            this.aGREGARToolStripMenuItem2.Name = "aGREGARToolStripMenuItem2";
-            this.aGREGARToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.aGREGARToolStripMenuItem2.Text = "AGREGAR";
-            // 
-            // mODIFICARToolStripMenuItem
-            // 
-            this.mODIFICARToolStripMenuItem.Name = "mODIFICARToolStripMenuItem";
-            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mODIFICARToolStripMenuItem.Text = "MODIFICAR";
-            // 
-            // eLIMINARToolStripMenuItem
-            // 
-            this.eLIMINARToolStripMenuItem.Name = "eLIMINARToolStripMenuItem";
-            this.eLIMINARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eLIMINARToolStripMenuItem.Text = "ELIMINAR";
             // 
             // button2
             // 
