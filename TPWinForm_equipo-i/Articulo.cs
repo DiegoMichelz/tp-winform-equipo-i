@@ -17,10 +17,10 @@ namespace TPWinForm_equipo_i
 
         public decimal Precio { get; set; }
 
-        public Marca marca;
+        public Marca marca { get; set; }
 
-        public Categoria categoria;
+        public Categoria categoria { get; set; }
 
-        public List<Imagen> Imagenes = new List<Imagen>();
+        public List<Imagen> Imagenes { get; set; } = new List<Imagen>();
     }
 }
