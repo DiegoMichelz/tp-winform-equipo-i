@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace TPWinForm_equipo_i
 {
-    internal class ConexionArticulos
+    public class ConexionArticulos
     {
             private SqlConnection conexion;
             private SqlCommand comando;

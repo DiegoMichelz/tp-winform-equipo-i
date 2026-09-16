@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_equipo_i
 {
-    internal class Articulo
+    public class Articulo
     {
         public int Id { get; set; }
         public string Codigo { get; set; }
@@ -17,9 +17,9 @@ namespace TPWinForm_equipo_i
 
         public decimal Precio { get; set; }
 
-        public Marca marca { get; set; }
+        public Marca Marca { get; set; }
 
-        public Categoria categoria { get; set; }
+        public Categoria Categoria { get; set; }
 
         public List<Imagen> Imagenes { get; set; } = new List<Imagen>();
     }
