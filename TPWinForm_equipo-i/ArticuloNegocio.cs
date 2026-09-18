@@ -95,5 +95,63 @@ namespace TPWinForm_equipo_i
                 datos.CerrarConexion();
             }
         }
+
+        public List<Marca> listarMarcas()
+        {
+            List<Marca> lista = new List<Marca>();
+            ConexionArticulos datos = new ConexionArticulos();
+
+            try
+            {
+                datos.SetearConsulta("SELECT Id, Descripcion FROM MARCAS");
+                datos.EjecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Marca marca = new Marca();
+                    marca.Id = (int)datos.Lector["Id"];
+                    marca.Descripcion = (string)datos.Lector["Descripcion"];
+                    lista.Add(marca);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
+        public List<Categoria> listarCategorias()
+        {
+            List<Categoria> lista = new List<Categoria>();
+            ConexionArticulos datos = new ConexionArticulos();
+
+            try
+            {
+                datos.SetearConsulta("SELECT Id, Descripcion FROM CATEGORIAS");
+                datos.EjecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Categoria categoria = new Categoria();
+                    categoria.Id = (int)datos.Lector["Id"];
+                    categoria.Descripcion = (string)datos.Lector["Descripcion"];
+                    lista.Add(categoria);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
     }
 }
