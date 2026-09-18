@@ -139,8 +139,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(26, 129);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(417, 339);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -153,7 +156,7 @@
             // textBox1
             // 
             this.textBox1.AccessibleName = "boxBuscador";
-            this.textBox1.Location = new System.Drawing.Point(61, 71);
+            this.textBox1.Location = new System.Drawing.Point(81, 35);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 20);
             this.textBox1.TabIndex = 9;
@@ -161,7 +164,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 74);
+            this.label1.Location = new System.Drawing.Point(23, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 10;
@@ -213,7 +216,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(256, 68);
+            this.button1.Location = new System.Drawing.Point(303, 61);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 16;
@@ -225,7 +228,7 @@
             this.comboBox1.AccessibleDescription = "";
             this.comboBox1.AccessibleName = "";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(358, 71);
+            this.comboBox1.Location = new System.Drawing.Point(26, 61);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 17;
@@ -234,7 +237,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(499, 71);
+            this.comboBox2.Location = new System.Drawing.Point(167, 63);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 18;
