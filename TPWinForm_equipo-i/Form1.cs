@@ -181,7 +181,9 @@ namespace TPWinForm_equipo_i
                 comboBox2.DataSource = listaCategorias;
                 comboBox2.ValueMember = "Id";
                 comboBox2.DisplayMember = "Descripcion";
-                comboBox2.SelectedIndex = -1; 
+                comboBox2.SelectedIndex = -1;
+
+                
             }
             catch (Exception ex)
             {
@@ -197,29 +199,42 @@ namespace TPWinForm_equipo_i
 
             List<Articulo> listaFiltrada = listaArticulo;
 
-            // 1. Filtramos por texto
-            string textoBusqueda = textBox1.Text.Trim().ToLower();//trim va a quitar los espacios al principio y al final
+            // 1. Filtramos por texto (sólo si escribió algo)
+            string textoBusqueda = textBox1.Text.Trim().ToLower();
             if (!string.IsNullOrEmpty(textoBusqueda))
             {
                 listaFiltrada = listaFiltrada.Where(x => x.Nombre != null && x.Nombre.ToLower().Contains(textoBusqueda)).ToList();
             }
 
-            // 2 Filtrar por Marca si hemos seleccionado una en el desplegable
-            if (comboBox1.SelectedIndex != -1)
+            // 2. Filtrar por Marca (sólo si hay una marca seleccionada en el combo)
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedIndex != -1)
             {
                 Marca marcaSeleccionada = (Marca)comboBox1.SelectedItem;
                 listaFiltrada = listaFiltrada.Where(x => x.Marca != null && x.Marca.Id == marcaSeleccionada.Id).ToList();
             }
 
-            // 3Filtramos por categoría si esque seleccionó alguna en el desplegable
-            if (comboBox2.SelectedIndex != -1)
+            // 3. Filtrar por Categoría (sólo si hay una categoría seleccionada en el combo)
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedIndex != -1)
             {
                 Categoria categoriaSeleccionada = (Categoria)comboBox2.SelectedItem;
                 listaFiltrada = listaFiltrada.Where(x => x.Categoria != null && x.Categoria.Id == categoriaSeleccionada.Id).ToList();
             }
 
-            // 4mandamos el filtrado a la DataGridView
+            // 4. Mostramos el resultado
             dataGridView1.DataSource = listaFiltrada;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            // 1. Limpiamos la caja de texto
+            textBox1.Clear();
+
+            // 2. Dejamos los combos vacíos
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+
+            // 3. Volvemos a mostrar la lista completa en la grilla
+            dataGridView1.DataSource = listaArticulo;
         }
     }
 }

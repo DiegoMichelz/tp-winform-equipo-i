@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|d:\\programaci\u00F3n 3\\tpi-progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\verdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\verdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|d:\\programaci\u00F3n 3\\tpi-progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|d:\\programaci\u00F3n 3\\tpi-progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +30,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "VerDetalle.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\VerDetalle.cs",
+              "RelativeDocumentMoniker": "TPWinForm_equipo-i\\VerDetalle.cs",
+              "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\VerDetalle.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TPWinForm_equipo-i\\VerDetalle.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-18T22:46:42.045Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ArticuloNegocio.cs",
               "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\ArticuloNegocio.cs",
               "RelativeDocumentMoniker": "TPWinForm_equipo-i\\ArticuloNegocio.cs",
               "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\ArticuloNegocio.cs",
               "RelativeToolTip": "TPWinForm_equipo-i\\ArticuloNegocio.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAAwHEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-18T00:08:26.428Z",
               "EditorCaption": ""
@@ -55,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.cs",
               "RelativeDocumentMoniker": "TPWinForm_equipo-i\\Form1.cs",
@@ -67,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.cs",
               "RelativeDocumentMoniker": "TPWinForm_equipo-i\\Form1.cs",
               "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.cs",
               "RelativeToolTip": "TPWinForm_equipo-i\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAANIAAAAAAAAAAAAQwOwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-15T00:23:41.318Z",
               "EditorCaption": ""
