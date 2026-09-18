@@ -96,23 +96,21 @@
             // aGREGARToolStripMenuItem2
             // 
             this.aGREGARToolStripMenuItem2.Name = "aGREGARToolStripMenuItem2";
-            this.aGREGARToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.aGREGARToolStripMenuItem2.Size = new System.Drawing.Size(137, 22);
             this.aGREGARToolStripMenuItem2.Text = "AGREGAR";
             this.aGREGARToolStripMenuItem2.Click += new System.EventHandler(this.aGREGARToolStripMenuItem2_Click);
             // 
             // mODIFICARToolStripMenuItem
             // 
             this.mODIFICARToolStripMenuItem.Name = "mODIFICARToolStripMenuItem";
-            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.mODIFICARToolStripMenuItem.Text = "MODIFICAR";
-            this.mODIFICARToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
             // 
             // eLIMINARToolStripMenuItem
             // 
             this.eLIMINARToolStripMenuItem.Name = "eLIMINARToolStripMenuItem";
-            this.eLIMINARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eLIMINARToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.eLIMINARToolStripMenuItem.Text = "ELIMINAR";
-            this.eLIMINARToolStripMenuItem.Click += new System.EventHandler(this.eLIMINARToolStripMenuItem_Click);
             // 
             // aGREGARToolStripMenuItem1
             // 
@@ -145,7 +143,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(417, 339);
             this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // contextMenuStrip1
             // 
@@ -168,13 +166,13 @@
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Buscar:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(470, 129);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(259, 171);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -195,7 +193,6 @@
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "Producto:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -251,6 +248,7 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "Ver Detalle";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Form1
             // 

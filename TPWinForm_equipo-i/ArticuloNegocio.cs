@@ -46,6 +46,8 @@ namespace TPWinForm_equipo_i
                     if (!(datos.Lector["Categoria"] is DBNull))
                         aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
+                    aux.Imagenes = cargarImagenes(aux.Id);
+
                     lista.Add(aux);
                 }
 
@@ -68,7 +70,7 @@ namespace TPWinForm_equipo_i
 
             try
             {
-                datos.SetearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = @idArticulo");
+                //datos.SetearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = @idArticulo");
                 // Puedes agregar un parámetro o concatenar idArticulo para filtrar
                 datos.SetearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = " + idArticulo);
                 datos.EjecutarLectura();

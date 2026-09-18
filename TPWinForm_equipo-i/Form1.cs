@@ -16,6 +16,7 @@ namespace TPWinForm_equipo_i
         public Form1()
         {
             InitializeComponent();
+            
         }
        
 
@@ -41,10 +42,7 @@ namespace TPWinForm_equipo_i
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -66,41 +64,17 @@ namespace TPWinForm_equipo_i
                 else
                 {
                     // Imagen por defecto si no tiene URL
-                    pictureBox1.Load("https://efectivelogservices.com/wp-content/uploads/2021/08/placeholder-1.png");
+                    pictureBox1.Load("https://blocks.astratic.com/img/general-img-landscape.png");
                 }
             }
             catch (Exception)
             {
                 // Imagen por defecto si falla la carga desde la Web
-                pictureBox1.Load("https://efectivelogservices.com/wp-content/uploads/2021/08/placeholder-1.png");
+                pictureBox1.Load("https://blocks.astratic.com/img/general-img-landscape.png");
             }
         }
 
-        // Botón "Ver Detalle"
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.CurrentRow != null)
-            {
-                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-                VerDetalle detalle = new VerDetalle(); // Puedes pasarle "seleccionado" por constructor si lo deseas
-                detalle.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecciona un artículo.");
-            }
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+           
 
         private void aGREGARToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -109,6 +83,37 @@ namespace TPWinForm_equipo_i
             alta.ShowDialog();
 
             cargar(); // Recargar grilla al cerrar la ventana de alta
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            // Verificamos que haya una fila seleccionada
+            if (dataGridView1.CurrentRow != null)
+            {
+                // Convertimos el elemento seleccionado en la fila a un objeto Articulo
+                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+
+                // Llamamos a la función auxiliar para cargar su imagen
+                cargarImagen(seleccionado.Imagenes);
+            }
+        }
+
+        // Botón "Ver Detalle"
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                // Obtenemos el artículo seleccionado de la grilla
+                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+
+                // Abrimos la ventana de detalle
+                VerDetalle detalle = new VerDetalle();
+                detalle.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un artículo para ver su detalle.");
+            }
         }
 
         /*private void mODIFICARToolStripMenuItem_Click(object sender, EventArgs e)
