@@ -16,14 +16,14 @@ namespace TPWinForm_equipo_i
         public Form1()
         {
             InitializeComponent();
-            
+
         }
-       
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
             cargar();
-           
+            cargarCombosFiltro();
         }
 
         private void cargar()
@@ -43,7 +43,7 @@ namespace TPWinForm_equipo_i
             }
         }
 
-       
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -75,7 +75,7 @@ namespace TPWinForm_equipo_i
             }
         }
 
-           
+
 
         private void aGREGARToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -162,5 +162,64 @@ namespace TPWinForm_equipo_i
                 MessageBox.Show("Por favor, selecciona un artículo para eliminar.");
             }
         }*/
+
+        //Filtro para los desplegables
+        private void cargarCombosFiltro()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                // Cargar combo de Marcas
+                List<Marca> listaMarcas = negocio.listarMarcas();
+                comboBox1.DataSource = listaMarcas;
+                comboBox1.ValueMember = "Id";
+                comboBox1.DisplayMember = "Descripcion";
+                comboBox1.SelectedIndex = -1; // esto deselecciona al inicio
+
+                // Cargar combo de Categorías
+                List<Categoria> listaCategorias = negocio.listarCategorias();
+                comboBox2.DataSource = listaCategorias;
+                comboBox2.ValueMember = "Id";
+                comboBox2.DisplayMember = "Descripcion";
+                comboBox2.SelectedIndex = -1; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los filtros: " + ex.Message);
+            }
+        }
+
+
+        //éste es el boton ir
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listaArticulo == null) return;
+
+            List<Articulo> listaFiltrada = listaArticulo;
+
+            // 1. Filtramos por texto
+            string textoBusqueda = textBox1.Text.Trim().ToLower();//trim va a quitar los espacios al principio y al final
+            if (!string.IsNullOrEmpty(textoBusqueda))
+            {
+                listaFiltrada = listaFiltrada.Where(x => x.Nombre != null && x.Nombre.ToLower().Contains(textoBusqueda)).ToList();
+            }
+
+            // 2 Filtrar por Marca si hemos seleccionado una en el desplegable
+            if (comboBox1.SelectedIndex != -1)
+            {
+                Marca marcaSeleccionada = (Marca)comboBox1.SelectedItem;
+                listaFiltrada = listaFiltrada.Where(x => x.Marca != null && x.Marca.Id == marcaSeleccionada.Id).ToList();
+            }
+
+            // 3Filtramos por categoría si esque seleccionó alguna en el desplegable
+            if (comboBox2.SelectedIndex != -1)
+            {
+                Categoria categoriaSeleccionada = (Categoria)comboBox2.SelectedItem;
+                listaFiltrada = listaFiltrada.Where(x => x.Categoria != null && x.Categoria.Id == categoriaSeleccionada.Id).ToList();
+            }
+
+            // 4mandamos el filtrado a la DataGridView
+            dataGridView1.DataSource = listaFiltrada;
+        }
     }
 }

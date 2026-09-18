@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|d:\\programaci\u00F3n 3\\tpi-progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|d:\\programaci\u00F3n 3\\tpi-progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\conexionarticulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\conexionarticulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\catalogo_db_v3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\catalogo_db_v3.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|d:\\programaci\u00F3n 3\\tpi-progra3\\tp-winform-equipo-i\\tpwinform_equipo-i\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06572295-F36E-47C3-BB7D-E35941469DC7}|TPWinForm_equipo-i\\TPWinForm_equipo-i.csproj|solutionrelative:tpwinform_equipo-i\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,31 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CATALOGO_DB_v3.sql ",
-              "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\CATALOGO_DB_v3.sql",
-              "RelativeDocumentMoniker": "TPWinForm_equipo-i\\CATALOGO_DB_v3.sql",
-              "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\CATALOGO_DB_v3.sql",
-              "RelativeToolTip": "TPWinForm_equipo-i\\CATALOGO_DB_v3.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-09-18T01:26:10.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConexionArticulos.cs",
-              "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\ConexionArticulos.cs",
-              "RelativeDocumentMoniker": "TPWinForm_equipo-i\\ConexionArticulos.cs",
-              "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\ConexionArticulos.cs",
-              "RelativeToolTip": "TPWinForm_equipo-i\\ConexionArticulos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-18T00:13:21.122Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -75,37 +36,26 @@
               "RelativeDocumentMoniker": "TPWinForm_equipo-i\\ArticuloNegocio.cs",
               "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\ArticuloNegocio.cs",
               "RelativeToolTip": "TPWinForm_equipo-i\\ArticuloNegocio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAAwHEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-18T00:08:26.428Z"
+              "WhenOpened": "2026-09-18T00:08:26.428Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Imagen.cs",
-              "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Imagen.cs",
-              "RelativeDocumentMoniker": "TPWinForm_equipo-i\\Imagen.cs",
-              "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Imagen.cs",
-              "RelativeToolTip": "TPWinForm_equipo-i\\Imagen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Title": "FrmAltaArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\FrmAltaArticulo.cs",
+              "RelativeDocumentMoniker": "TPWinForm_equipo-i\\FrmAltaArticulo.cs",
+              "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\FrmAltaArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TPWinForm_equipo-i\\FrmAltaArticulo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-18T00:10:33.944Z"
+              "WhenOpened": "2026-09-18T21:53:01.964Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Articulo.cs",
-              "RelativeDocumentMoniker": "TPWinForm_equipo-i\\Articulo.cs",
-              "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Articulo.cs",
-              "RelativeToolTip": "TPWinForm_equipo-i\\Articulo.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAvwBkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-18T00:09:27.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.cs",
               "RelativeDocumentMoniker": "TPWinForm_equipo-i\\Form1.cs",
@@ -117,28 +67,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.cs",
               "RelativeDocumentMoniker": "TPWinForm_equipo-i\\Form1.cs",
               "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.cs",
               "RelativeToolTip": "TPWinForm_equipo-i\\Form1.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAxwD0AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-15T00:23:41.318Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "TPWinForm_equipo-i\\Form1.Designer.cs",
-              "ToolTip": "D:\\Programaci\u00F3n 3\\TPI-Progra3\\tp-winform-equipo-i\\TPWinForm_equipo-i\\Form1.Designer.cs",
-              "RelativeToolTip": "TPWinForm_equipo-i\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-12T01:03:53.513Z"
             }
           ]
         }
