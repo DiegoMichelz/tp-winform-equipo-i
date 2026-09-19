@@ -18,6 +18,7 @@ namespace TPWinForm_equipo_i
         public VerDetalle(Articulo articulo) : this()
         {
             this.articulo = articulo;
+            this.btnCerrar.Click += new System.EventHandler(btnCerrar_Click);
 
             // Cargar datos directamente aquí para no depender exclusivamente del evento Load
             cargarDatos();
@@ -38,9 +39,9 @@ namespace TPWinForm_equipo_i
                 // Asegúrate de que los nombres de los Labels coincidan con la ventana de Propiedades
                 // Cambiamos "Codigo.Text" por "lblCodigo.Text"
                 if (lblCodigo != null) lblCodigo.Text = "Código: " + articulo.Codigo;
-                if (lblNombre != null) lblNombre.Text = articulo.Nombre;
+                if (lblNombre != null) lblNombre.Text = "Nombre: " + articulo.Nombre;
                 if (txtDescripcion != null) txtDescripcion.Text = articulo.Descripcion;
-                if (lblPrecio != null) lblPrecio.Text = "$" + articulo.Precio.ToString("0.00");
+                if (lblPrecio != null) lblPrecio.Text = "Precio: $" + articulo.Precio.ToString("0.00");
 
                 if (lblMarca != null)
                     lblMarca.Text = "Marca: " + (articulo.Marca != null ? articulo.Marca.Descripcion : "Sin Marca");
@@ -76,7 +77,17 @@ namespace TPWinForm_equipo_i
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+        }
+
+        private void VerDetalle_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

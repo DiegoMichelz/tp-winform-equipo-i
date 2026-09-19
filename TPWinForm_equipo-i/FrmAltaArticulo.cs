@@ -21,5 +21,20 @@ namespace TPWinForm_equipo_i
         {
 
         }
+
+        /**private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Close();
+        }**/
+
+        private void FrmAltaArticulo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
