@@ -124,7 +124,7 @@
             // 
             this.lblDetalleProducto.AutoSize = true;
             this.lblDetalleProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetalleProducto.Location = new System.Drawing.Point(27, 36);
+            this.lblDetalleProducto.Location = new System.Drawing.Point(27, 24);
             this.lblDetalleProducto.Name = "lblDetalleProducto";
             this.lblDetalleProducto.Size = new System.Drawing.Size(133, 13);
             this.lblDetalleProducto.TabIndex = 8;
@@ -138,11 +138,13 @@
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
             // 
             // VerDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(727, 450);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblDetalleProducto);
@@ -155,7 +157,8 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pbxImagen);
             this.Name = "VerDetalle";
-            this.Text = "b";
+            this.Text = "Ver Detalles";
+            this.Load += new System.EventHandler(this.VerDetalle_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
