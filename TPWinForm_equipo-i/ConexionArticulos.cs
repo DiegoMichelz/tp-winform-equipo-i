@@ -18,8 +18,9 @@ namespace TPWinForm_equipo_i
 
             public ConexionArticulos()
             //*server=(localdb)\\MSSQLLocalDB;
+            //"server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
             {
-                conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
+                conexion = new SqlConnection("Server=localhost,1433;Database=CATALOGO_P3_DB;User Id=sa;Password=BaseDatos#2;TrustServerCertificate=True;");
                 comando = new SqlCommand();
             }
 

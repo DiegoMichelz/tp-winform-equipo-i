@@ -31,3 +31,6 @@ C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\obj
 C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.exe
 C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.pdb
 D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.VerDetalle.resources
+C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe.config
+C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe
+C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.pdb

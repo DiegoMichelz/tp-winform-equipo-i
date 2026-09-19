@@ -102,13 +102,13 @@ namespace TPWinForm_equipo_i
         // Botón "Ver Detalle"
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null)
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.DataBoundItem != null)
             {
-                // Obtenemos el artículo seleccionado de la grilla
+                // Guardamos el objeto seleccionado de la fila actual de la grilla
                 Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
 
-                // Abrimos la ventana de detalle
-                VerDetalle detalle = new VerDetalle();
+                // Creamos la instancia pasándole el artículo por parámetro
+                VerDetalle detalle = new VerDetalle(seleccionado);
                 detalle.ShowDialog();
             }
             else
