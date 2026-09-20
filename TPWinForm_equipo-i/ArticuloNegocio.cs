@@ -217,5 +217,62 @@ namespace TPWinForm_equipo_i
                 datos.CerrarConexion();
             }
         }
+
+        public void modificar(Articulo articulo)
+        {
+            ConexionArticulos datos = new ConexionArticulos();
+            try
+            {
+                datos.SetearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @id");
+                datos.SetearParametro("@codigo", articulo.Codigo);
+                datos.SetearParametro("@nombre", articulo.Nombre);
+                datos.SetearParametro("@descripcion", articulo.Descripcion);
+                datos.SetearParametro("@idMarca", articulo.Marca.Id);
+                datos.SetearParametro("@idCategoria", articulo.Categoria.Id);
+                datos.SetearParametro("@precio", articulo.Precio);
+                datos.SetearParametro("@id", articulo.Id);
+
+                datos.EjecutarAccion();
+                datos.CerrarConexion();
+
+                // 2. Manejo de la Imagen
+                if (articulo.Imagenes != null && articulo.Imagenes.Count > 0 && !string.IsNullOrEmpty(articulo.Imagenes[0].ImageUrl))
+                {
+                    string urlNube = articulo.Imagenes[0].ImageUrl;
+
+                    // Verificamos si la imagen ya existía en la base de datos
+                    if (articulo.Imagenes[0].Id != 0)
+                    {
+                        // Si ya existía, hacemos un UPDATE
+                        datos = new ConexionArticulos();
+                        datos.SetearConsulta("UPDATE IMAGENES SET ImagenUrl = @url WHERE Id = @idImagen");
+                        datos.SetearParametro("@url", urlNube);
+                        datos.SetearParametro("@idImagen", articulo.Imagenes[0].Id);
+                        datos.EjecutarAccion();
+                    }
+                    else
+                    {
+                        // Si el artículo no tenía imagen previamente, hacemos un INSERT
+                        datos = new ConexionArticulos();
+                        datos.SetearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@idArticulo, @url)");
+                        datos.SetearParametro("@idArticulo", articulo.Id);
+                        datos.SetearParametro("@url", urlNube);
+                        datos.EjecutarAccion();
+                    }
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
     }
 }

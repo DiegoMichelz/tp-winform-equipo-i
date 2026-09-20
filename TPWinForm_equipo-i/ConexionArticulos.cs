@@ -16,9 +16,9 @@ namespace TPWinForm_equipo_i
 
         public SqlDataReader Lector => lector;
 
-        public ConexionArticulos()
+        public ConexionArticulos()//"server=(localdb)\\MSSQLLocalDB; database=CATALOGO_P3_DB; integrated security=true"
         {
-            conexion = new SqlConnection("server=(localdb)\\MSSQLLocalDB; database=CATALOGO_P3_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
 

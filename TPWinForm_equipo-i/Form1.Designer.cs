@@ -97,6 +97,7 @@
             this.mODIFICARToolStripMenuItem.Name = "mODIFICARToolStripMenuItem";
             this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mODIFICARToolStripMenuItem.Text = "MODIFICAR";
+            this.mODIFICARToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
             // 
             // eLIMINARToolStripMenuItem
             // 

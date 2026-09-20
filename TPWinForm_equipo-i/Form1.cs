@@ -108,10 +108,26 @@ namespace TPWinForm_equipo_i
             }
         }
 
-        // Espacio libre para que tu compañero agregue Modificar
+        
         private void mODIFICARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Espacio reservado para Modificar
+            // Verificamos que haya un elemento seleccionado en la grilla
+            if (dataGridView1.CurrentRow != null)
+            {
+                // Obtenemos el objeto completo desde la fila seleccionada
+                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+
+                // Le pasamos 'seleccionado' por parámetro al nuevo constructor
+                FrmAltaArticulo modificar = new FrmAltaArticulo(seleccionado);
+                modificar.ShowDialog();
+
+                cargar(); // Recargamos el DataGridView para ver las modificaciones actualizadas
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un artículo de la lista para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void eLIMINARToolStripMenuItem_Click(object sender, EventArgs e)
@@ -202,6 +218,11 @@ namespace TPWinForm_equipo_i
             {
                 MessageBox.Show("Por favor, selecciona un artículo para eliminar.");
             }
+        }
+
+        private void mODIFICARToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
