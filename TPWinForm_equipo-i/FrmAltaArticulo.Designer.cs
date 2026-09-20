@@ -108,6 +108,7 @@
             this.txtPrecio.Size = new System.Drawing.Size(195, 20);
             this.txtPrecio.TabIndex = 7;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // cboMarca
             // 
@@ -241,6 +242,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmAltaArticulo";
             this.Text = "FrmAltaArticulo";
             this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);

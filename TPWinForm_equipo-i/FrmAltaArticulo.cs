@@ -105,13 +105,14 @@ namespace TPWinForm_equipo_i
 
             try
             {
+                // 1. Validación de campos obligatorios
                 if (string.IsNullOrEmpty(txtCodigo.Text) || string.IsNullOrEmpty(txtNombre.Text))
                 {
                     MessageBox.Show("Ingresa al menos Código y Nombre.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Si estamos modificando reutilizamos articuloSeleccionado; si no, creamos uno nuevo
+                // 2. Si estamos modificando reutilizamos articuloSeleccionado; si no, creamos uno nuevo
                 Articulo target = articuloSeleccionado != null ? articuloSeleccionado : new Articulo();
 
                 target.Codigo = txtCodigo.Text;
@@ -125,42 +126,40 @@ namespace TPWinForm_equipo_i
                 target.Marca = (Marca)cboMarca.SelectedItem;
                 target.Categoria = (Categoria)cboCategoria.SelectedItem;
 
-                // Manejo de la lista de imágenes
+                // 3. Asignación de la lista de imágenes desde el TextBox
+                target.Imagenes = new List<Imagen>();
+
                 if (!string.IsNullOrEmpty(txtUrlImagen.Text))
                 {
-                    int idImagenExistente = 0;
+                    Imagen img = new Imagen();
 
-                    // Si estábamos modificando y ya existía un registro de imagen, conservamos su Id
+                    // Si estábamos modificando y ya existía una imagen, conservamos su Id
                     if (articuloSeleccionado != null && articuloSeleccionado.Imagenes != null && articuloSeleccionado.Imagenes.Count > 0)
                     {
-                        idImagenExistente = articuloSeleccionado.Imagenes[0].Id;
+                        img.Id = articuloSeleccionado.Imagenes[0].Id;
                     }
 
-                    target.Imagenes = new List<Imagen>();
-                    Imagen img = new Imagen();
-                    img.Id = idImagenExistente;
                     img.ImageUrl = txtUrlImagen.Text;
                     target.Imagenes.Add(img);
                 }
 
-                // 4. GUARDAR O MODIFICAR EN LA BASE DE DATOS
+                // 4. Guardar o Modificar en la Base de Datos
                 if (articuloSeleccionado != null)
                 {
                     negocio.modificar(target);
-                    
-                    MessageBox.Show("¡Artículo modificado exitosamente!");
+                    MessageBox.Show("¡Artículo modificado exitosamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     negocio.agregar(target);
-                    MessageBox.Show("¡Artículo guardado exitosamente!");
+                    MessageBox.Show("¡Artículo guardado exitosamente!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar: " + ex.Message);
+                MessageBox.Show("Error al guardar: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     
@@ -183,6 +182,15 @@ namespace TPWinForm_equipo_i
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Si la tecla NO es un número, NO es borrado, NO es punto y NO es coma -> la bloquea
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.' && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

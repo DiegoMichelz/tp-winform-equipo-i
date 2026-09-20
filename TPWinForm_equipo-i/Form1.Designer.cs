@@ -88,21 +88,21 @@
             // aGREGARToolStripMenuItem2
             // 
             this.aGREGARToolStripMenuItem2.Name = "aGREGARToolStripMenuItem2";
-            this.aGREGARToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.aGREGARToolStripMenuItem2.Size = new System.Drawing.Size(137, 22);
             this.aGREGARToolStripMenuItem2.Text = "AGREGAR";
             this.aGREGARToolStripMenuItem2.Click += new System.EventHandler(this.aGREGARToolStripMenuItem2_Click);
             // 
             // mODIFICARToolStripMenuItem
             // 
             this.mODIFICARToolStripMenuItem.Name = "mODIFICARToolStripMenuItem";
-            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mODIFICARToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.mODIFICARToolStripMenuItem.Text = "MODIFICAR";
             this.mODIFICARToolStripMenuItem.Click += new System.EventHandler(this.mODIFICARToolStripMenuItem_Click);
             // 
             // eLIMINARToolStripMenuItem
             // 
             this.eLIMINARToolStripMenuItem.Name = "eLIMINARToolStripMenuItem";
-            this.eLIMINARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eLIMINARToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.eLIMINARToolStripMenuItem.Text = "ELIMINAR";
             this.eLIMINARToolStripMenuItem.Click += new System.EventHandler(this.eLIMINARToolStripMenuItem_Click_1);
             // 
@@ -281,6 +281,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "APP GESTOR";

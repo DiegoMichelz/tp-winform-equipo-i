@@ -156,6 +156,8 @@
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pbxImagen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "VerDetalle";
             this.Text = "Ver Detalles";
             this.Load += new System.EventHandler(this.VerDetalle_Load_1);

@@ -118,11 +118,8 @@ namespace TPWinForm_equipo_i
 
             try
             {
-                datos.SetearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) " +
-                                     "OUTPUT INSERTED.Id " +
-                                     "VALUES (@codigo, @nombre, @descripcion, @precio, @idMarca, @idCategoria)");
-
-                datos.SetearConsulta($"INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES ('{nuevo.Codigo}', '{nuevo.Nombre}', '{nuevo.Descripcion}', {nuevo.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {nuevo.Marca.Id}, {nuevo.Categoria.Id})");
+                // 1. Guardamos el artículo y recuperamos el ID recién generado con OUTPUT INSERTED.Id
+                datos.SetearConsulta($"INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) OUTPUT INSERTED.Id VALUES ('{nuevo.Codigo}', '{nuevo.Nombre}', '{nuevo.Descripcion}', {nuevo.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {nuevo.Marca.Id}, {nuevo.Categoria.Id})");
 
                 datos.EjecutarLectura();
 
@@ -133,9 +130,13 @@ namespace TPWinForm_equipo_i
                 }
                 datos.CerrarConexion();
 
-                if (nuevo.Imagenes != null && nuevo.Imagenes.Count > 0 && idGenerado > 0)
+                // 2. Si tiene imagen asociada y se obtuvo un ID válido, guardamos la imagen
+                if (nuevo.Imagenes != null && nuevo.Imagenes.Count > 0 && !string.IsNullOrEmpty(nuevo.Imagenes[0].ImageUrl) && idGenerado > 0)
                 {
-                    agregarImagen(idGenerado, nuevo.Imagenes[0].ImageUrl);
+                    datos = new ConexionArticulos();
+                    datos.SetearConsulta($"INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES ({idGenerado}, '{nuevo.Imagenes[0].ImageUrl}')");
+                    datos.EjecutarLectura();
+                    datos.CerrarConexion();
                 }
             }
             catch (Exception ex)
