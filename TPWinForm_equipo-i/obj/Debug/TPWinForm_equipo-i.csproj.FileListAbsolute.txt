@@ -34,3 +34,15 @@ D:\Programación 3\TPI-Progra3\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\
 C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe.config
 C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe
 C:\Users\FacuPC\Desktop\Nueva carpeta\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.pdb
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe.config
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.exe
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\bin\Debug\TPWinForm_equipo-i.pdb
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.csproj.AssemblyReference.cache
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.Form1.resources
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.FrmAltaArticulo.resources
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.Properties.Resources.resources
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo_i.VerDetalle.resources
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.csproj.GenerateResource.cache
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.csproj.CoreCompileInputs.cache
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.exe
+C:\Users\Diego Michel\Documents\UTN\2026\PROGRA 3\TPS\tp-winform-equipo-i\tp-winform-equipo-i\TPWinForm_equipo-i\obj\Debug\TPWinForm_equipo-i.pdb

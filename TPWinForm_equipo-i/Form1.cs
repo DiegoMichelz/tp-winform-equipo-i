@@ -13,17 +13,33 @@ namespace TPWinForm_equipo_i
     public partial class Form1 : Form
     {
         private List<Articulo> listaArticulo;
+
         public Form1()
         {
             InitializeComponent();
-
         }
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
             cargar();
-            cargarCombosFiltro();
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+
+                comboBox1.DataSource = negocio.listarMarcas();
+                comboBox1.ValueMember = "Id";
+                comboBox1.DisplayMember = "Descripcion";
+                comboBox1.SelectedIndex = -1;
+
+                comboBox2.DataSource = negocio.listarCategorias();
+                comboBox2.ValueMember = "Id";
+                comboBox2.DisplayMember = "Descripcion";
+                comboBox2.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void cargar()
@@ -34,23 +50,12 @@ namespace TPWinForm_equipo_i
                 listaArticulo = negocio.listar();
                 dataGridView1.DataSource = listaArticulo;
 
-                // Opcional: Ocultar columnas que no quieras mostrar directo en la grilla
-                dataGridView1.Columns["Id"].Visible = false;
+                if (dataGridView1.Columns["Id"] != null)
+                    dataGridView1.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar los productos: " + ex.Message);
-            }
-        }
-
-
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (dataGridView1.CurrentRow != null)
-            {
-                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-                cargarImagen(seleccionado.Imagenes);
             }
         }
 
@@ -64,50 +69,36 @@ namespace TPWinForm_equipo_i
                 }
                 else
                 {
-                    // Imagen por defecto si no tiene URL
                     pictureBox1.Load("https://blocks.astratic.com/img/general-img-landscape.png");
                 }
             }
             catch (Exception)
             {
-                // Imagen por defecto si falla la carga desde la Web
                 pictureBox1.Load("https://blocks.astratic.com/img/general-img-landscape.png");
             }
         }
 
-
-
         private void aGREGARToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             FrmAltaArticulo alta = new FrmAltaArticulo();
-
             alta.ShowDialog();
-
-            cargar(); // Recargar grilla al cerrar la ventana de alta
+            cargar();
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            // Verificamos que haya una fila seleccionada
             if (dataGridView1.CurrentRow != null)
             {
-                // Convertimos el elemento seleccionado en la fila a un objeto Articulo
                 Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-
-                // Llamamos a la función auxiliar para cargar su imagen
                 cargarImagen(seleccionado.Imagenes);
             }
         }
 
-        // Botón "Ver Detalle"
         private void button2_Click_1(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.DataBoundItem != null)
             {
-                // Guardamos el objeto seleccionado de la fila actual de la grilla
                 Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-
-                // Creamos la instancia pasándole el artículo por parámetro
                 VerDetalle detalle = new VerDetalle(seleccionado);
                 detalle.ShowDialog();
             }
@@ -117,124 +108,100 @@ namespace TPWinForm_equipo_i
             }
         }
 
-        /*private void mODIFICARToolStripMenuItem_Click(object sender, EventArgs e)
+        // Espacio libre para que tu compañero agregue Modificar
+        private void mODIFICARToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow != null)
-            {
-                // Asumiendo que tu grilla guarda objetos de tipo 'Articulo' en su DataSource
-                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-
-                // Abrimos el formulario de alta PASÁNDOLE el artículo por constructor (para modificar)
-                FrmAltaArticulo modificar = new FrmAltaArticulo(seleccionado);
-                modificar.ShowDialog();
-
-                // Recargar grilla después de modificar (descomentar cuando tengas el método de carga)
-                // cargarGrilla();
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecciona un artículo para modificar.");
-            }
+            // Espacio reservado para Modificar
         }
-
 
         private void eLIMINARToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow != null)
             {
-                // Pedimos confirmación antes de borrar
-                DialogResult respuesta = MessageBox.Show("¿Estás seguro de eliminar este artículo?", "Eliminar Artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+
+                DialogResult respuesta = MessageBox.Show("¿Estás seguro de eliminar a " + seleccionado.Nombre + "?", "Eliminar Artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (respuesta == DialogResult.Yes)
                 {
-                    Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+                    ArticuloNegocio negocio = new ArticuloNegocio();
+                    negocio.Eliminar(seleccionado.Id);
 
-                    // Aquí llamarías a tu negocio/datos para borrarlo físicamente o lógicamente:
-                    // ArticuloNegocio negocio = new ArticuloNegocio();
-                    // negocio.Eliminar(seleccionado.Id);
-
-                    // Recargar grilla
-                    // cargarGrilla();
+                    MessageBox.Show("Artículo eliminado correctamente.");
+                    cargar();
                 }
             }
             else
             {
                 MessageBox.Show("Por favor, selecciona un artículo para eliminar.");
             }
-        }*/
-
-        //Filtro para los desplegables
-        private void cargarCombosFiltro()
-        {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            try
-            {
-                // Cargar combo de Marcas
-                List<Marca> listaMarcas = negocio.listarMarcas();
-                comboBox1.DataSource = listaMarcas;
-                comboBox1.ValueMember = "Id";
-                comboBox1.DisplayMember = "Descripcion";
-                comboBox1.SelectedIndex = -1; // esto deselecciona al inicio
-
-                // Cargar combo de Categorías
-                List<Categoria> listaCategorias = negocio.listarCategorias();
-                comboBox2.DataSource = listaCategorias;
-                comboBox2.ValueMember = "Id";
-                comboBox2.DisplayMember = "Descripcion";
-                comboBox2.SelectedIndex = -1;
-
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar los filtros: " + ex.Message);
-            }
-        }
-
-
-        //éste es el boton ir
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (listaArticulo == null) return;
-
-            List<Articulo> listaFiltrada = listaArticulo;
-
-            // 1. Filtramos por texto (sólo si escribió algo)
-            string textoBusqueda = textBox1.Text.Trim().ToLower();
-            if (!string.IsNullOrEmpty(textoBusqueda))
-            {
-                listaFiltrada = listaFiltrada.Where(x => x.Nombre != null && x.Nombre.ToLower().Contains(textoBusqueda)).ToList();
-            }
-
-            // 2. Filtrar por Marca (sólo si hay una marca seleccionada en el combo)
-            if (comboBox1.SelectedItem != null && comboBox1.SelectedIndex != -1)
-            {
-                Marca marcaSeleccionada = (Marca)comboBox1.SelectedItem;
-                listaFiltrada = listaFiltrada.Where(x => x.Marca != null && x.Marca.Id == marcaSeleccionada.Id).ToList();
-            }
-
-            // 3. Filtrar por Categoría (sólo si hay una categoría seleccionada en el combo)
-            if (comboBox2.SelectedItem != null && comboBox2.SelectedIndex != -1)
-            {
-                Categoria categoriaSeleccionada = (Categoria)comboBox2.SelectedItem;
-                listaFiltrada = listaFiltrada.Where(x => x.Categoria != null && x.Categoria.Id == categoriaSeleccionada.Id).ToList();
-            }
-
-            // 4. Mostramos el resultado
-            dataGridView1.DataSource = listaFiltrada;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            // 1. Limpiamos la caja de texto
             textBox1.Clear();
+            if (comboBox1 != null) comboBox1.SelectedIndex = -1;
+            if (comboBox2 != null) comboBox2.SelectedIndex = -1;
+            cargar();
+        }
 
-            // 2. Dejamos los combos vacíos
-            comboBox1.SelectedIndex = -1;
-            comboBox2.SelectedIndex = -1;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> lista = negocio.listar();
 
-            // 3. Volvemos a mostrar la lista completa en la grilla
-            dataGridView1.DataSource = listaArticulo;
+            try
+            {
+                string textoBusqueda = textBox1.Text.Trim();
+                if (!string.IsNullOrEmpty(textoBusqueda))
+                {
+                    lista = lista.FindAll(x =>
+                        (x.Nombre != null && x.Nombre.ToUpper().Contains(textoBusqueda.ToUpper())) ||
+                        (x.Codigo != null && x.Codigo.ToUpper().Contains(textoBusqueda.ToUpper()))
+                    );
+                }
+
+                if (comboBox1.SelectedIndex != -1 && comboBox1.SelectedItem != null)
+                {
+                    Marca marca = (Marca)comboBox1.SelectedItem;
+                    lista = lista.FindAll(x => x.Marca != null && x.Marca.Id == marca.Id);
+                }
+
+                if (comboBox2.SelectedIndex != -1 && comboBox2.SelectedItem != null)
+                {
+                    Categoria categoria = (Categoria)comboBox2.SelectedItem;
+                    lista = lista.FindAll(x => x.Categoria != null && x.Categoria.Id == categoria.Id);
+                }
+
+                dataGridView1.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void eLIMINARToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+
+                DialogResult respuesta = MessageBox.Show("¿Estás seguro de eliminar a " + seleccionado.Nombre + "?", "Eliminar Artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    ArticuloNegocio negocio = new ArticuloNegocio();
+                    negocio.Eliminar(seleccionado.Id);
+
+                    MessageBox.Show("Artículo eliminado correctamente.");
+                    cargar();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona un artículo para eliminar.");
+            }
         }
     }
 }

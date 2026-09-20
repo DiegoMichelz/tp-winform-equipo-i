@@ -10,45 +10,62 @@ namespace TPWinForm_equipo_i
 {
     public class ConexionArticulos
     {
-            private SqlConnection conexion;
-            private SqlCommand comando;
-            private SqlDataReader lector;
+        private SqlConnection conexion;
+        private SqlCommand comando;
+        private SqlDataReader lector;
 
-            public SqlDataReader Lector => lector;
+        public SqlDataReader Lector => lector;
 
-            public ConexionArticulos()
-            //*server=(localdb)\\MSSQLLocalDB;
-            //"server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+        public ConexionArticulos()
+        {
+            conexion = new SqlConnection("server=(localdb)\\MSSQLLocalDB; database=CATALOGO_P3_DB; integrated security=true");
+            comando = new SqlCommand();
+        }
+
+        public void SetearConsulta(string consulta)
+        {
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = consulta;
+        }
+
+        public void SetearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
+        public void EjecutarLectura()
+        {
+            comando.Connection = conexion;
+            try
             {
-                conexion = new SqlConnection("Server=localhost,1433;Database=CATALOGO_P3_DB;User Id=sa;Password=BaseDatos#2;TrustServerCertificate=True;");
-                comando = new SqlCommand();
+                conexion.Open();
+                lector = comando.ExecuteReader();
             }
-
-            public void SetearConsulta(string consulta)
+            catch (Exception ex)
             {
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = consulta;
-            }
-
-            public void EjecutarLectura()
-            {
-                comando.Connection = conexion;
-                try
-                {
-                    conexion.Open();
-                    lector = comando.ExecuteReader();
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-            }
-
-            public void CerrarConexion()
-            {
-                if (lector != null)
-                    lector.Close();
-                conexion.Close();
+                throw ex;
             }
         }
+
+        public void EjecutarAccion()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void CerrarConexion()
+        {
+            if (lector != null)
+                lector.Close();
+            conexion.Close();
+        }
+    }
 }

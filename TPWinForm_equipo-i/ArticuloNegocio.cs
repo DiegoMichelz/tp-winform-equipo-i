@@ -15,7 +15,6 @@ namespace TPWinForm_equipo_i
 
             try
             {
-                // Realizamos el JOIN para obtener el nombre/descripción de Marcas y Categorías
                 datos.SetearConsulta(@"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, 
                                              M.Id AS IdMarca, M.Descripcion AS Marca, 
                                              C.Id AS IdCategoria, C.Descripcion AS Categoria 
@@ -70,8 +69,6 @@ namespace TPWinForm_equipo_i
 
             try
             {
-                //datos.SetearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = @idArticulo");
-                // Puedes agregar un parámetro o concatenar idArticulo para filtrar
                 datos.SetearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = " + idArticulo);
                 datos.EjecutarLectura();
 
@@ -96,24 +93,14 @@ namespace TPWinForm_equipo_i
             }
         }
 
-        public List<Marca> listarMarcas()
+        public void Eliminar(int id)
         {
-            List<Marca> lista = new List<Marca>();
             ConexionArticulos datos = new ConexionArticulos();
-
             try
             {
-                datos.SetearConsulta("SELECT Id, Descripcion FROM MARCAS");
-                datos.EjecutarLectura();
-
-                while (datos.Lector.Read())
-                {
-                    Marca marca = new Marca();
-                    marca.Id = (int)datos.Lector["Id"];
-                    marca.Descripcion = (string)datos.Lector["Descripcion"];
-                    lista.Add(marca);
-                }
-                return lista;
+                datos.SetearConsulta("DELETE FROM ARTICULOS WHERE Id = @id");
+                datos.SetearParametro("@id", id);
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {
@@ -125,46 +112,16 @@ namespace TPWinForm_equipo_i
             }
         }
 
-        public List<Categoria> listarCategorias()
-        {
-            List<Categoria> lista = new List<Categoria>();
-            ConexionArticulos datos = new ConexionArticulos();
-
-            try
-            {
-                datos.SetearConsulta("SELECT Id, Descripcion FROM CATEGORIAS");
-                datos.EjecutarLectura();
-
-                while (datos.Lector.Read())
-                {
-                    Categoria categoria = new Categoria();
-                    categoria.Id = (int)datos.Lector["Id"];
-                    categoria.Descripcion = (string)datos.Lector["Descripcion"];
-                    lista.Add(categoria);
-                }
-                return lista;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.CerrarConexion();
-            }
-        }
         public void agregar(Articulo nuevo)
         {
             ConexionArticulos datos = new ConexionArticulos();
 
             try
             {
-                // Insertamos el artículo y recuperamos el ID generado
                 datos.SetearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) " +
                                      "OUTPUT INSERTED.Id " +
                                      "VALUES (@codigo, @nombre, @descripcion, @precio, @idMarca, @idCategoria)");
 
-                // Usar parámetros o sustitución directa según tu implementación
                 datos.SetearConsulta($"INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES ('{nuevo.Codigo}', '{nuevo.Nombre}', '{nuevo.Descripcion}', {nuevo.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {nuevo.Marca.Id}, {nuevo.Categoria.Id})");
 
                 datos.EjecutarLectura();
@@ -176,7 +133,6 @@ namespace TPWinForm_equipo_i
                 }
                 datos.CerrarConexion();
 
-                // Si ingresaron URL de imagen, la guardamos en la tabla IMAGENES
                 if (nuevo.Imagenes != null && nuevo.Imagenes.Count > 0 && idGenerado > 0)
                 {
                     agregarImagen(idGenerado, nuevo.Imagenes[0].ImageUrl);
@@ -198,11 +154,63 @@ namespace TPWinForm_equipo_i
             try
             {
                 datos.SetearConsulta($"INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES ({idArticulo}, '{url}')");
-                datos.EjecutarLectura();
+                datos.EjecutarAccion();
             }
             catch (Exception)
             {
-                // Manejo silencioso si falla la imagen
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+        public List<Marca> listarMarcas()
+        {
+            List<Marca> lista = new List<Marca>();
+            ConexionArticulos datos = new ConexionArticulos();
+            try
+            {
+                datos.SetearConsulta("SELECT Id, Descripcion FROM MARCAS");
+                datos.EjecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Marca aux = new Marca();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
+        public List<Categoria> listarCategorias()
+        {
+            List<Categoria> lista = new List<Categoria>();
+            ConexionArticulos datos = new ConexionArticulos();
+            try
+            {
+                datos.SetearConsulta("SELECT Id, Descripcion FROM CATEGORIAS");
+                datos.EjecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Categoria aux = new Categoria();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
             finally
             {
