@@ -153,5 +153,61 @@ namespace TPWinForm_equipo_i
                 datos.CerrarConexion();
             }
         }
+        public void agregar(Articulo nuevo)
+        {
+            ConexionArticulos datos = new ConexionArticulos();
+
+            try
+            {
+                // Insertamos el artículo y recuperamos el ID generado
+                datos.SetearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) " +
+                                     "OUTPUT INSERTED.Id " +
+                                     "VALUES (@codigo, @nombre, @descripcion, @precio, @idMarca, @idCategoria)");
+
+                // Usar parámetros o sustitución directa según tu implementación
+                datos.SetearConsulta($"INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES ('{nuevo.Codigo}', '{nuevo.Nombre}', '{nuevo.Descripcion}', {nuevo.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}, {nuevo.Marca.Id}, {nuevo.Categoria.Id})");
+
+                datos.EjecutarLectura();
+
+                int idGenerado = 0;
+                if (datos.Lector.Read())
+                {
+                    idGenerado = (int)datos.Lector[0];
+                }
+                datos.CerrarConexion();
+
+                // Si ingresaron URL de imagen, la guardamos en la tabla IMAGENES
+                if (nuevo.Imagenes != null && nuevo.Imagenes.Count > 0 && idGenerado > 0)
+                {
+                    agregarImagen(idGenerado, nuevo.Imagenes[0].ImageUrl);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
+        public void agregarImagen(int idArticulo, string url)
+        {
+            ConexionArticulos datos = new ConexionArticulos();
+            try
+            {
+                datos.SetearConsulta($"INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES ({idArticulo}, '{url}')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception)
+            {
+                // Manejo silencioso si falla la imagen
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
     }
 }

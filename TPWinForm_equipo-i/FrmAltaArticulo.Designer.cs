@@ -32,26 +32,28 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.txtUrlImagen = new System.Windows.Forms.TextBox();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
+            this.pbxImagen = new System.Windows.Forms.PictureBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 72);
+            this.label1.Location = new System.Drawing.Point(37, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
@@ -60,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 98);
+            this.label2.Location = new System.Drawing.Point(37, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 124);
+            this.label3.Location = new System.Drawing.Point(37, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -78,106 +80,90 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 148);
+            this.label4.Location = new System.Drawing.Point(37, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Precio:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtCodigo.Location = new System.Drawing.Point(110, 56);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(195, 20);
+            this.txtCodigo.TabIndex = 4;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtNombre.Location = new System.Drawing.Point(110, 82);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(195, 20);
+            this.txtNombre.TabIndex = 5;
             // 
-            // textBox3
+            // txtPrecio
             // 
-            this.textBox3.Location = new System.Drawing.Point(106, 121);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtPrecio.Location = new System.Drawing.Point(110, 112);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(195, 20);
+            this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
-            // textBox4
+            // cboMarca
             // 
-            this.textBox4.Location = new System.Drawing.Point(106, 145);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 20);
-            this.textBox4.TabIndex = 7;
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(110, 138);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(195, 21);
+            this.cboMarca.TabIndex = 8;
             // 
-            // comboBox1
+            // cboCategoria
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.Text = "Marca";
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(110, 165);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(195, 21);
+            this.cboCategoria.TabIndex = 9;
             // 
-            // comboBox2
+            // txtUrlImagen
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(106, 198);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(149, 21);
-            this.comboBox2.TabIndex = 9;
-            this.comboBox2.Text = "Categoria";
+            this.txtUrlImagen.Location = new System.Drawing.Point(110, 192);
+            this.txtUrlImagen.Name = "txtUrlImagen";
+            this.txtUrlImagen.Size = new System.Drawing.Size(195, 20);
+            this.txtUrlImagen.TabIndex = 10;
             // 
-            // textBox5
+            // btnAgregarImagen
             // 
-            this.textBox5.Location = new System.Drawing.Point(106, 225);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(129, 20);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "URL Imagen";
+            this.btnAgregarImagen.Location = new System.Drawing.Point(138, 218);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(129, 23);
+            this.btnAgregarImagen.TabIndex = 11;
+            this.btnAgregarImagen.Text = "Agregar imagen";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // pbxImagen
             // 
-            this.button1.Location = new System.Drawing.Point(106, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Agregar imagen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pbxImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImagen.Location = new System.Drawing.Point(378, 31);
+            this.pbxImagen.Name = "pbxImagen";
+            this.pbxImagen.Size = new System.Drawing.Size(339, 362);
+            this.pbxImagen.TabIndex = 13;
+            this.pbxImagen.TabStop = false;
             // 
-            // listBox1
+            // btnAceptar
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(305, 298);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(228, 95);
-            this.listBox1.TabIndex = 12;
-            //this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(305, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(339, 249);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(581, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAceptar.Location = new System.Drawing.Point(558, 399);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 14;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(662, 399);
+            this.btnCancelar.Location = new System.Drawing.Point(639, 399);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 15;
@@ -189,31 +175,68 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 31);
+            this.label5.Location = new System.Drawing.Point(37, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "Carga de Producto:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(37, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Marca:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(37, 168);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Categoria:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(37, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "URL Imagen:";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(40, 260);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(307, 133);
+            this.txtDescripcion.TabIndex = 20;
+            // 
             // FrmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.ClientSize = new System.Drawing.Size(768, 450);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.pbxImagen);
+            this.Controls.Add(this.btnAgregarImagen);
+            this.Controls.Add(this.txtUrlImagen);
+            this.Controls.Add(this.cboCategoria);
+            this.Controls.Add(this.cboMarca);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -221,7 +244,7 @@
             this.Name = "FrmAltaArticulo";
             this.Text = "FrmAltaArticulo";
             this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,18 +256,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.TextBox txtUrlImagen;
+        private System.Windows.Forms.Button btnAgregarImagen;
+        private System.Windows.Forms.PictureBox pbxImagen;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDescripcion;
     }
 }
